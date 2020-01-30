@@ -1,0 +1,97 @@
+﻿@model Carreteras.tb_tramos
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tb_tramos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_km_inicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_km_inicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_km_fin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_km_fin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_fecha_crea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_fecha_crea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_fecha_modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_fecha_modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tra_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tra_estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_carreteras.car_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_carreteras.car_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_usuarios.usu_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_usuarios.usu_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_usuarios1.usu_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_usuarios1.usu_descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

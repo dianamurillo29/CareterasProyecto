@@ -11,7 +11,7 @@
 
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <link href="~/Content/css/plugins/dataTables/datatables.min.css" rel="stylesheet" />"
     <link href="~/Content/css/animate.css" rel="stylesheet">
     <link href="~/Content/css/style.css" rel="stylesheet">
 
@@ -215,7 +215,53 @@
     <!-- Custom a~/Content/gin javascript -->
     <script src="~/Content/js/inspinia.js"></script>
     <script src="~/Content/js/plugins/pace/pace.min.js"></script>
+    <script src="/content/js/plugins/dataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "",
+                    "infoEmpty": "",
+                    "infoFiltered": "(Filtrado de MAX total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                },
 
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+
+                    {
+
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+
+                    }
+                    }]
+            });
+
+        });
+
+    </script>
 
 </body>
 

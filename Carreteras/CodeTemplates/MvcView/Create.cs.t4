@@ -78,6 +78,8 @@ if (ReferenceScriptLibraries) {
 {
     @Html.AntiForgeryToken()
     
+	 <div class="ibox-content">
+
     <div class="form-horizontal">
         <h4><#= ViewDataTypeShortName #></h4>
         <hr />
@@ -176,24 +178,22 @@ foreach (PropertyMetadata property in ModelMetadata.Properties) {
 #>
             </div>
         </div>
+		
 
 <#
     }
 }
 #>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="col-md-offset-10 col-md-10">
                 <input type="submit" value="Guardar" class="btn btn-success  " /> 
 				 @Html.ActionLink("Cancelar", "Index",null,new { @class = " btn btn-default" })
             </div>
         </div>
+  </div>
     </div>
 }
 
-<div>
-  
-	  
-</div>
 <#
 if(IsLayoutPageSelected && ReferenceScriptLibraries && IsBundleConfigPresent) {
 #>

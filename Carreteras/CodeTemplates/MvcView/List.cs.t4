@@ -52,10 +52,13 @@ if (!String.IsNullOrEmpty(LayoutPageFile)) {
 
 
  <div class="ibox-content">
+    <div class="table-responsive">
 
-
-<table class="table table-bordered">
-    <tr>
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+   
+   <table class="table table-striped table-bordered table-hover dataTables-example dataTable dtr-inline" id="tbl" aria-describedby="tabla_evento_info" role="grid">
+    <thead>
+	<tr>
 <#
 IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
 foreach (PropertyMetadata property in properties) {
@@ -68,6 +71,7 @@ foreach (PropertyMetadata property in properties) {
             continue;
         }
 #>
+
         <th>
             @Html.DisplayNameFor(model => model.<#= GetValueExpression(property) #>)
         </th>
@@ -77,7 +81,7 @@ foreach (PropertyMetadata property in properties) {
 #>
         <th>Accion</th>
     </tr>
-
+	</thead>
 @foreach (var item in Model) {
     <tr>
 <#
@@ -124,6 +128,8 @@ if (pkName != null) {
 
 
 
+ </div>
+ </div>
  </div>
 
 
