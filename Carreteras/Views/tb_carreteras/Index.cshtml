@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Carreteras.tb_carreteras>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+	 @Html.ActionLink("Nuevo", "Create",null,new { @class = "btn btn-success toolbar-item" })
+</p>
+
+
+
+
+ <div class="ibox-content">
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.car_descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_km_inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_km_fin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_finC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_fecha_crea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_fecha_modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_categorias.cat_descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_ciudades.ciu_descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_usuarios.usu_descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_usuarios1.usu_descripcion)
+        </th>
+        <th>Accion</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_km_inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_km_fin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_finC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_fecha_crea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_fecha_modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_categorias.cat_descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_ciudades.ciu_descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_usuarios.usu_descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_usuarios1.usu_descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.car_id }, new { @class = "btn btn-success  btn-xs" }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.car_id }, new { @class = "btn btn-default btn-xs" }) |
+            @Html.ActionLink("Inactivar", "Delete", new { id=item.car_id }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+
+ </div>
+
+
+
+

@@ -201,6 +201,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\tb_carreterasController.cs" />
+    <Compile Include="Controllers\tb_departamentosController.cs" />
+    <Compile Include="Controllers\tb_pantallasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -346,6 +349,21 @@
     <Content Include="Views\tb_ciudades\Details.cshtml" />
     <Content Include="Views\tb_ciudades\Edit.cshtml" />
     <Content Include="Views\tb_ciudades\Index.cshtml" />
+    <Content Include="Views\tb_carreteras\Create.cshtml" />
+    <Content Include="Views\tb_carreteras\Delete.cshtml" />
+    <Content Include="Views\tb_carreteras\Details.cshtml" />
+    <Content Include="Views\tb_carreteras\Edit.cshtml" />
+    <Content Include="Views\tb_carreteras\Index.cshtml" />
+    <Content Include="Views\tb_pantallas\Create.cshtml" />
+    <Content Include="Views\tb_pantallas\Delete.cshtml" />
+    <Content Include="Views\tb_pantallas\Details.cshtml" />
+    <Content Include="Views\tb_pantallas\Edit.cshtml" />
+    <Content Include="Views\tb_pantallas\Index.cshtml" />
+    <Content Include="Views\tb_departamentos\Create.cshtml" />
+    <Content Include="Views\tb_departamentos\Delete.cshtml" />
+    <Content Include="Views\tb_departamentos\Details.cshtml" />
+    <Content Include="Views\tb_departamentos\Edit.cshtml" />
+    <Content Include="Views\tb_departamentos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

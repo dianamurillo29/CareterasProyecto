@@ -1,0 +1,107 @@
+﻿@model Carreteras.tb_carreteras
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tb_carreteras</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.car_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_km_inicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_km_inicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_km_fin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_km_fin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_finC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_finC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_fecha_crea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_fecha_crea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_fecha_modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_fecha_modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_categorias.cat_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_categorias.cat_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_ciudades.ciu_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_ciudades.ciu_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_usuarios.usu_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_usuarios.usu_descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_usuarios1.usu_descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_usuarios1.usu_descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.car_id }, new { @class = "btn btn-success  " }) |
+    @Html.ActionLink("Cancelar", "Index",null,new { @class = " btn btn-default" })
+</p>
